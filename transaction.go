@@ -39,15 +39,15 @@ func (tx *Transaction) SetID() {
 
 // TXInput represents a transaction input
 type TXInput struct {
-	Txid      []byte
-	Vout      int
-	ScriptSig string
+	Txid      []byte // transaction id
+	Vout      int    // spend value， input付出的数目
+	ScriptSig string // input account,输入账户
 }
 
 // TXOutput represents a transaction output
 type TXOutput struct {
-	Value        int
-	ScriptPubKey string
+	Value        int     // the output get the value from input，交易数目，output获得数目
+	ScriptPubKey string  // output account，输出账户
 }
 
 // CanUnlockOutputWith checks whether the address initiated the transaction

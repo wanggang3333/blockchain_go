@@ -67,6 +67,7 @@ func (bc *Blockchain) FindUnspentTransactions(address string) []Transaction {
 	bci := bc.Iterator()
 
 	for {
+		// from the tail end to start init
 		block := bci.Next()
 
 		for _, tx := range block.Transactions {
